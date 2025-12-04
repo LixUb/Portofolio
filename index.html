@@ -26,7 +26,10 @@
     <h2 id="designer-text" class="hidden">Designed by Rayhan Nulhafiz</h2>
   </div>
 </div>
-    <header class="header-list">
+    <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle menu">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+    <header class="header-list" id="header">
         <div class="div-list ">
             <ul class="ul-list">
                 <li class="active">
@@ -72,8 +75,8 @@
                     <p><i class="fa-solid fa-graduation-cap"></i> MAN Insan Cendekia Kota Batam</p>
                 </div>
                 <div class="btnn">
-                    <button class="btn-home1"><i class="fa-solid fa-code-branch"></i> View Projects</button>
-                    <button class="btn-home2"><i class="fa-solid fa-coffee"></i> Let's Collaborate</button>
+                    <button class="btn-home1" onclick="document.querySelector('#project').scrollIntoView({behavior: 'smooth'})"><i class="fa-solid fa-code-branch"></i> View Projects</button>
+                    <button class="btn-home2" onclick="document.querySelector('#contact').scrollIntoView({behavior: 'smooth'})"><i class="fa-solid fa-coffee"></i> Let's Collaborate</button>
                 </div>
                 <div class="hhr">
                     <hr>
@@ -84,7 +87,7 @@
                         <li><a href="https://github.com/LixUb" target="_blank"><i class="fa-brands fa-github"></i></a></li>
                         <li><a href="#"><i class="fa-brands fa-discord"></i></a></li>
                         <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
-                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="https://www.instagram.com/rayyhfz_/"><i class="fa-brands fa-instagram"></i></a></li>
                     </ul>
                 </div>
             </div>
