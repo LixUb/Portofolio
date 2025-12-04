@@ -17,6 +17,10 @@
 
     <h1 id="loading-text" class="hidden">MY PROFILE</h1>
 
+    <div class="loading-bar-container hidden">
+      <div class="loading-bar"></div>
+    </div>
+
     <div class="sub-icons">
       <i class="fa-brands fa-github fa-2x hidden"></i>
       <i class="fa-solid fa-code fa-2x hidden"></i>
@@ -55,11 +59,27 @@
             </ul>
         </div>
     </header>
+
+    <!-- intro quote -->
+    <section class="intro" id="intro">
+        <div class="intro-inner">
+            <div class="intro-photo-wrapper">
+                <!-- Replace this image with your own profile photo path -->
+                <img src="images/012A0325.JPG" alt="Rayhan profile" class="intro-photo">
+            </div>
+            <h1 class="intro-name">Rayhan Nulhafiz</h1>
+            <h2 class="intro-role">Full-Stack Developer</h2>
+            <p class="intro-subtext">Building modern mobile & web experiences with clean, scalable code.</p>
+            <div class="scroll-indicator">
+                <span>Scroll</span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+    <!-- end intro -->
+
     <!-- home -->
     <section class="home" id="home">
-        <p class="home-p">
-            <span class="home-s">☕ </span>"Can we pretend to leave and then we'll meet again?"
-        </p>
         <div class="home-container">
         <div class="home-section">
             <div class="info-home">
@@ -92,7 +112,9 @@
                 </div>
             </div>
           </div>
-          <img src="images/012A0325.JPG" alt="">
+          <div class="home-photo-wrapper">
+            <img src="images/012A0325.JPG" alt="Portrait of Rayhan" class="home-photo">
+          </div>
         </div>
     </section>
     <!-- fine home  -->
@@ -134,7 +156,9 @@
                 </div>
             </div>
         </div>
-        <img src="images/012A0328.JPG" alt="">
+        <div class="about-photo-wrapper">
+          <img src="images/012A0328.JPG" alt="Rayhan speaking" class="about-photo">
+        </div>
         </div>
      </section>
      <section class="project" id="project">
@@ -335,7 +359,7 @@
       <a href="" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
       <a href="" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
     </div>
-    <p class="footer-copy">&copy; 2025 Rayhanul. All Rights Reserved. • Made with ☕ and code</p>
+    <p class="footer-copy">&copy; 2025 Rayhanul. All Rights Reserved.</p>
   </div>
 </footer>
 

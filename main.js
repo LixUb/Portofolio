@@ -2,6 +2,8 @@ const navLinks = document.querySelectorAll('.ul-list li a');
 const sections = document.querySelectorAll('section');
 const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
 const header = document.getElementById('header');
+const introSection = document.getElementById('intro');
+let introDismissed = false;
 
 function removeActive() {
   navLinks.forEach(link => link.parentElement.classList.remove('active'));
@@ -64,6 +66,12 @@ function throttle(func, wait) {
 }
 
 window.addEventListener('scroll', throttle(() => {
+  // Hide intro section after user starts scrolling
+  if (introSection && !introDismissed && window.scrollY > 40) {
+    introSection.classList.add('intro-hidden');
+    introDismissed = true;
+  }
+
   // Add scrolled class to header for styling
   if (window.scrollY > 50) {
     header.classList.add('scrolled');
@@ -196,6 +204,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const mainIcon = document.querySelector(".main-icon");
   const subIcons = document.querySelectorAll(".sub-icons i");
   const designerText = document.getElementById("designer-text");
+  const loadingBarContainer = document.querySelector(".loading-bar-container");
   const loadingScreen = document.getElementById("loading-screen");
 
   function showElement(element, delay=0){
@@ -206,12 +215,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }, delay);
   }
 
-  showElement(loadingText, 0);          
-  showElement(mainIcon, 800);         
+  showElement(loadingText, 0);
+  showElement(loadingBarContainer, 400);
+  showElement(mainIcon, 900);
   subIcons.forEach((icon, idx) => {
-    showElement(icon, 1600 + idx*400);  
+    showElement(icon, 1700 + idx*350);
   });
-  showElement(designerText, 2800);    
+  showElement(designerText, 2700);
 
   setTimeout(() => {
     if (loadingScreen) {
